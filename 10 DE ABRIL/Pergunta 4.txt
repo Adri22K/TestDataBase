@@ -1,0 +1,5 @@
+ALTER TABLE Playlist ADD COLUMN data_criaçao DATE;
+SELECT * FROM Playlist;
+
+ALTER TABLE Artista ADD COLUMN pais_origem VARCHAR(25);
+SELECT * FROM Artista;

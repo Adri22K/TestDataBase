@@ -1,0 +1,11 @@
+UPDATE Usuário 
+SET email = 'luisasouza@gmail.com'
+WHERE email = 'luisa@gmail.com';
+
+UPDATE Musica
+SET genero = 'Pop Rock'
+WHERE genero = 'Rock';
+
+UPDATE Playlist
+SET nome = 'Clássicos do Rock'
+WHERE nome = 'Rock Nacional';

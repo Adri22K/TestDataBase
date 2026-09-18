@@ -1,0 +1,35 @@
+CREATE TABLE Usuário(
+	id_usuario INTEGER PRIMARY KEY,
+	nome VARCHAR(100),
+	email VARCHAR (30)
+);
+
+CREATE TABLE Musica(
+	id_musica INTEGER PRIMARY KEY,
+	titulo VARCHAR(20),
+	genero VARCHAR(20),
+	id_usuario INTEGER,
+	
+	CONSTRAINT id_usuarioFK FOREIGN KEY (id_usuario)
+	REFERENCES Usuário (id_usuario)
+);
+
+CREATE TABLE Artista(
+	id_artista INTEGER PRIMARY KEY,
+	nome VARCHAR(100),
+	data_nascimento DATE,
+	id_musica INTEGER,
+	
+	CONSTRAINT id_musicaFK FOREIGN KEY (id_musica)
+	REFERENCES Musica (id_musica)
+);
+
+CREATE TABLE Playlist(
+	id_playlist INTEGER PRIMARY KEY,
+	nome VARCHAR(100),
+	id_artista INTEGER,
+	
+	CONSTRAINT id_artistaFK FOREIGN KEY (id_artista)
+	REFERENCES Artista (id_artista)
+);
+
